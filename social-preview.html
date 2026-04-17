@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Second Brain — Social Preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    background: #000;
+  }
+
+  .canvas {
+    width: 1280px;
+    height: 640px;
+    background: #00132F;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+  }
+
+  /* Background grid */
+  .canvas::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(88, 182, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(88, 182, 255, 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+  }
+
+  /* Ambient glow */
+  .canvas::after {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(88, 182, 255, 0.18) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .left {
+    position: relative;
+    z-index: 2;
+    padding: 72px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .eyebrow {
+    color: #58B6FF;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .title {
+    color: #FFFFFF;
+    font-size: 92px;
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -3px;
+    margin-bottom: 28px;
+  }
+
+  .subtitle {
+    color: #FFFFFF;
+    opacity: 0.8;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.35;
+    max-width: 620px;
+  }
+
+  .subtitle strong {
+    color: #58B6FF;
+    font-weight: 600;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .credits {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+  }
+
+  .credits strong { color: rgba(255, 255, 255, 0.9); font-weight: 600; }
+
+  .byline {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #FFFFFF;
+    font-size: 19px;
+    font-weight: 600;
+  }
+
+  .byline-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #58B6FF;
+    box-shadow: 0 0 12px #58B6FF;
+  }
+
+  /* Right side — Obsidian-style graph */
+  .right {
+    position: relative;
+    z-index: 2;
+  }
+
+  svg.graph {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="left">
+    <div>
+      <div class="eyebrow">A Claude Code Skill</div>
+      <h1 class="title">AI Second<br>Brain</h1>
+      <p class="subtitle">Turn your <strong>ChatGPT + Claude history</strong> into a living wiki you can text from your phone.</p>
+    </div>
+    <div class="footer">
+      <div class="credits">Built on work by <strong>Andrej Karpathy</strong> × <strong>Alex Freedman</strong> × <strong>Greg Isenberg</strong></div>
+      <div class="byline"><span class="byline-dot"></span>by Charlie Hills</div>
+    </div>
+  </div>
+
+  <div class="right">
+    <svg class="graph" viewBox="0 0 540 640" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="4" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+        <radialGradient id="nodeBig" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#8FD1FF"/>
+          <stop offset="100%" stop-color="#58B6FF"/>
+        </radialGradient>
+      </defs>
+
+      <!-- Edges -->
+      <g stroke="#58B6FF" stroke-opacity="0.35" stroke-width="1.4" fill="none">
+        <line x1="270" y1="320" x2="120" y2="180"/>
+        <line x1="270" y1="320" x2="410" y2="200"/>
+        <line x1="270" y1="320" x2="160" y2="450"/>
+        <line x1="270" y1="320" x2="420" y2="450"/>
+        <line x1="270" y1="320" x2="350" y2="100"/>
+        <line x1="270" y1="320" x2="90" y2="330"/>
+        <line x1="270" y1="320" x2="460" y2="330"/>
+        <line x1="270" y1="320" x2="300" y2="530"/>
+        <line x1="120" y1="180" x2="350" y2="100"/>
+        <line x1="120" y1="180" x2="90" y2="330"/>
+        <line x1="410" y1="200" x2="350" y2="100"/>
+        <line x1="410" y1="200" x2="460" y2="330"/>
+        <line x1="160" y1="450" x2="300" y2="530"/>
+        <line x1="420" y1="450" x2="300" y2="530"/>
+        <line x1="420" y1="450" x2="460" y2="330"/>
+        <line x1="160" y1="450" x2="90" y2="330"/>
+        <line x1="210" y1="120" x2="120" y2="180"/>
+        <line x1="210" y1="120" x2="350" y2="100"/>
+        <line x1="210" y1="120" x2="270" y2="320"/>
+        <line x1="490" y1="560" x2="420" y2="450"/>
+        <line x1="490" y1="560" x2="300" y2="530"/>
+      </g>
+
+      <!-- Nodes -->
+      <g filter="url(#glow)">
+        <!-- Hub -->
+        <circle cx="270" cy="320" r="22" fill="url(#nodeBig)"/>
+
+        <!-- Primary nodes -->
+        <circle cx="120" cy="180" r="13" fill="#58B6FF"/>
+        <circle cx="410" cy="200" r="13" fill="#58B6FF"/>
+        <circle cx="160" cy="450" r="13" fill="#58B6FF"/>
+        <circle cx="420" cy="450" r="13" fill="#58B6FF"/>
+        <circle cx="350" cy="100" r="11" fill="#58B6FF"/>
+        <circle cx="90" cy="330" r="11" fill="#58B6FF"/>
+        <circle cx="460" cy="330" r="11" fill="#58B6FF"/>
+        <circle cx="300" cy="530" r="11" fill="#58B6FF"/>
+
+        <!-- Secondary nodes -->
+        <circle cx="210" cy="120" r="7" fill="#58B6FF" fill-opacity="0.85"/>
+        <circle cx="490" cy="560" r="7" fill="#58B6FF" fill-opacity="0.85"/>
+        <circle cx="50" cy="240" r="6" fill="#58B6FF" fill-opacity="0.7"/>
+        <circle cx="510" cy="130" r="6" fill="#58B6FF" fill-opacity="0.7"/>
+        <circle cx="230" cy="570" r="5" fill="#58B6FF" fill-opacity="0.6"/>
+      </g>
+    </svg>
+  </div>
+</div>
+</body>
+</html>
