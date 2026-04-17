@@ -2,7 +2,7 @@
 
 > A Claude Code skill that walks you through building a living, searchable, AI-powered knowledge base from your own ChatGPT and Claude history, your raw research, and your daily inputs.
 
-Built for non-technical readers of [MarTech AI](https://martechai.substack.com) — the newsletter where I share what I'm building with AI as a content creator with 200k+ LinkedIn followers.
+Built for non-technical readers of [MarTech AI](https://charliehills.substack.com) — the newsletter where I share what I'm building with AI as a content creator with 200k+ LinkedIn followers.
 
 If you've ever felt the pain of asking ChatGPT the same question six months apart, or losing a brilliant idea because it lived in a chat tab you closed, this is for you.
 
@@ -69,7 +69,7 @@ I (Charlie Hills) wrote the skill that orchestrates all three and walks you thro
 
 ## Want to talk?
 
-I write [MarTech AI](https://martechai.substack.com) — a weekly Substack on what I'm actually building with AI as a creator. If you got value from this skill, that's where to find more.
+I write [MarTech AI](https://charliehills.substack.com) — a weekly Substack on what I'm actually building with AI as a creator. If you got value from this skill, that's where to find more.
 
 Reach me on [LinkedIn](https://linkedin.com/in/charlie-hills) or [Instagram](https://instagram.com/charliehills).
 
