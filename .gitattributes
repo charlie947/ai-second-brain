@@ -1,0 +1,7 @@
+# Tell GitHub Linguist these are tooling/assets, not the project's "source language".
+# Without this, the repo gets misclassified as HTML or JavaScript.
+# The actual skill is in SKILL.md; everything else here is supporting material.
+
+social-preview.html linguist-vendored=true
+render-social-preview.js linguist-vendored=true
+*.skill linguist-detectable=false
