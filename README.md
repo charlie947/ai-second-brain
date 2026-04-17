@@ -38,7 +38,7 @@ There are two install paths. Pick one.
 ### Option B: Clone the repo (for developers)
 
 ```bash
-git clone https://github.com/CHARLIEHILLS-USERNAME/ai-second-brain.git ~/.claude/skills/ai-second-brain
+git clone https://github.com/charlie947/ai-second-brain.git ~/.claude/skills/ai-second-brain
 ```
 
 Then open Claude Code and say:
