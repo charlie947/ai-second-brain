@@ -130,7 +130,7 @@ I (Charlie Hills) wrote the skill that orchestrates all three and walks you thro
 
 ## About the author
 
-I'm Charlie Hills — founder of [Cognified](https://cognified.co.uk), a content agency, and writer of [MarTech AI](https://charliehills.substack.com), a weekly Substack on what I'm actually building with AI as a creator with 200k+ LinkedIn followers.
+I'm Charlie Hills — founder of [Vislo](https://www.vislo.ai/), an AI image editing tool, and writer of [MarTech AI](https://charliehills.substack.com), a weekly Substack on what I'm actually building with AI as a creator with 200k+ LinkedIn followers.
 
 If you got value from this skill, the newsletter is where to find more.
 
