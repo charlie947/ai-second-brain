@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 process.env.PUPPETEER_SKIP_CHROME_DOWNLOAD = '1';
-const puppeteer = require('/Users/charliehills/Desktop/infographic-generator/node_modules/puppeteer');
+// Install once with: npm install puppeteer
+const puppeteer = require(process.env.PUPPETEER_PATH || 'puppeteer');
 const path = require('path');
 
 (async () => {
